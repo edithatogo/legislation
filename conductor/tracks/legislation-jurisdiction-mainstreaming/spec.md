@@ -16,6 +16,9 @@ provenance.
 - Source, licensing, fixture, conformance, and release evidence for every lane
 - One product in which jurisdiction is configuration and data, not a separate
   tool
+- A Freedom-of-Information vertical slice covering the nine primary
+  Commonwealth, state, and territory information-access statutes and their
+  subordinate instruments.
 
 Existing provider tracks remain the detailed implementation lanes. A provider
 is mainstream only after its source and licence are verified and its declared
@@ -28,3 +31,5 @@ Fabricated records and silent cross-provider fallbacks are prohibited.
 - Cross-jurisdiction discovery and provider selection are deterministic.
 - CLI, MCP, export, citation, and docs report jurisdiction and source.
 - Release claims distinguish stable, prerelease, planned, and blocked lanes.
+- A versioned FOI source-pack manifest can be consumed by `foi-o` without
+  copying unpinned legal text or collapsing jurisdiction-specific legal effects.

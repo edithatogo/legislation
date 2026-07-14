@@ -19,6 +19,20 @@
 - [ ] Task: Mainstream Australian Capital Territory through shared gates
 - [ ] Task: Mainstream Northern Territory through shared gates
 
+## Phase 2A — Freedom-of-Information vertical slice
+
+- [x] Task: Register the nine primary Australian information-access statutes
+      and map each to its existing provider lane.
+- [ ] Task: Export pinned current and point-in-time FOI statute identifiers,
+      versions, source URLs, digests, and provider capability states.
+- [ ] Task: Include applicable regulations, fee instruments, amendments, and
+      commencement metadata without treating regulator guidance as legislation.
+- [ ] Task: Add a deterministic FOI source-pack manifest for downstream FOI-O use.
+- [ ] Task: Add contract tests that reject missing jurisdiction, version,
+      provenance, and unsupported-capability fields.
+- [ ] Task: Review official provider surfaces for newly documented APIs; update
+      the relevant provider issue and track before adding any new adapter.
+
 ## Phase 3 — Unified behavior
 
 - [ ] Task: Implement deterministic cross-jurisdiction discovery and routing
