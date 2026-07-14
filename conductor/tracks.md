@@ -1,5 +1,7 @@
 # Conductor Tracks
 
+| `citation-zenodo-mirroring` | P0 | In progress | Versioned CFF and Zenodo mirror readiness for manuscript artefacts |
+
 This registry lists active delivery tracks in this repository. The umbrella
 release/distribution track remains the source of truth for publication,
 submission, registry, and marketplace gates. `conductor/requirements.md` is the
