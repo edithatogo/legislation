@@ -97,6 +97,11 @@
   "homepage": "https://github.com/edithatogo/nz-legislation#readme",
   "pnpm": {
     "overrides": {
+      "brace-expansion": "5.0.8",
+      "fast-uri": "3.1.4",
+      "js-yaml@>=3.0.0 <3.15.0": "3.15.0",
+      "js-yaml@>=4.0.0 <4.3.0": "4.3.0",
+      "postcss": "8.5.18",
       "vite": "7.3.5",
       "vitest>vite": "7.3.5"
     }

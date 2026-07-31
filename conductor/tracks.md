@@ -18,6 +18,7 @@ registry, integration, and migration tracks listed here.
 | `legislation-jurisdiction-mainstreaming` | P0       | Planned | Converge NZ and every Australian jurisdiction on one evidence-backed provider contract.         |
 | `legislation-brand-migration`            | P0       | Planned | Adopt legislation as the neutral product identity through a compatibility-preserving migration. |
 | `official-gazette-sources`               | P0       | Planned | Add NZ and Australian Gazette or equivalent sources as a distinct content family.               |
+| `global_foi_legislation_gazette_coverage_20260721` | P0 | Planned | Complete official legislation and Gazette/equivalent evidence for every FOI-O roadmap target. |
 
 ## Provider implementation tracks
 
