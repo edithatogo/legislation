@@ -5,17 +5,17 @@ contracts. It does not create a separate scraper, legal-data store, or product.
 
 ## Primary legislation set
 
-| Jurisdiction | Primary information-access legislation | Provider lane |
-| --- | --- | --- |
-| Commonwealth | Freedom of Information Act 1982 | `anz-provider-commonwealth` |
-| Australian Capital Territory | Freedom of Information Act 2016 | `anz-provider-act` |
-| New South Wales | Government Information (Public Access) Act 2009 | `anz-provider-nsw` |
-| Northern Territory | Information Act 2002 | `anz-provider-northern-territory` |
-| Queensland | Right to Information Act 2009 | `anz-provider-queensland` |
-| South Australia | Freedom of Information Act 1991 | `anz-provider-south-australia` |
-| Tasmania | Right to Information Act 2009 | `anz-provider-tasmania` |
-| Victoria | Freedom of Information Act 1982 | `anz-provider-victoria` |
-| Western Australia | Freedom of Information Act 1992 | `anz-provider-western-australia` |
+| Jurisdiction                 | Primary information-access legislation          | Provider lane                     |
+| ---------------------------- | ----------------------------------------------- | --------------------------------- |
+| Commonwealth                 | Freedom of Information Act 1982                 | `anz-provider-commonwealth`       |
+| Australian Capital Territory | Freedom of Information Act 2016                 | `anz-provider-act`                |
+| New South Wales              | Government Information (Public Access) Act 2009 | `anz-provider-nsw`                |
+| Northern Territory           | Information Act 2002                            | `anz-provider-northern-territory` |
+| Queensland                   | Right to Information Act 2009                   | `anz-provider-queensland`         |
+| South Australia              | Freedom of Information Act 1991                 | `anz-provider-south-australia`    |
+| Tasmania                     | Right to Information Act 2009                   | `anz-provider-tasmania`           |
+| Victoria                     | Freedom of Information Act 1982                 | `anz-provider-victoria`           |
+| Western Australia            | Freedom of Information Act 1992                 | `anz-provider-western-australia`  |
 
 ## Required source-pack contents
 
@@ -50,3 +50,13 @@ track, source validation, capability manifest, tests, and provenance card.
 FOI-O consumes pinned, bitemporal source-pack manifests. It does not copy
 unversioned legal text or infer that similarly named provisions have equivalent
 legal effect across jurisdictions.
+
+## Restricted-local candidate evidence
+
+The six verified official artifacts for ACT, NT, SA, Tasmania, Victoria, and WA
+are recorded in
+`australian-official-source-pack-candidate-2026-08-01.json`. The candidate pins
+version identity, effective date, source URL, byte count, format, and SHA-256;
+it explicitly does not activate runtime support, publication, redistribution,
+or empirical use. Tasmania's XML is the authoritative machine-readable
+candidate; its earlier truncated response remains retained as failure evidence.
