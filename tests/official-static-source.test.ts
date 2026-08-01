@@ -1,8 +1,8 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
-import { mapOfficialPdfActMetadata } from '../src/providers/official-static-source.ts';
 import type { OfficialSourceArtifact } from '../src/providers/official-source-contract.ts';
+import { mapOfficialPdfActMetadata } from '../src/providers/official-static-source.ts';
 
 type Candidate = OfficialSourceArtifact & { accessStatus: string };
 

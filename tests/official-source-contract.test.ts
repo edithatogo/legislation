@@ -2,8 +2,8 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
 import {
-  validateOfficialSourceArtifact,
   type OfficialSourceArtifact,
+  validateOfficialSourceArtifact,
 } from '../src/providers/official-source-contract.ts';
 
 const tasmania: OfficialSourceArtifact = {

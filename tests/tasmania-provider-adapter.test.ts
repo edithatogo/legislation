@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
-import { parseTasmaniaActXml } from '../src/providers/tasmania.ts';
 import type { OfficialSourceArtifact } from '../src/providers/official-source-contract.ts';
+import { parseTasmaniaActXml } from '../src/providers/tasmania.ts';
 
 const source: OfficialSourceArtifact = {
   jurisdiction: 'au-tas',

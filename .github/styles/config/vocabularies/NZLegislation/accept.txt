@@ -150,3 +150,13 @@ SVGs
 reverified
 cutover
 semver
+SHAs
+sessional
+Zenodo
+bitemporal
+deliverables
+untracked
+unversioned
+validator
+validators
+worktree
