@@ -19,6 +19,23 @@
     "sourceFormats": ["PDF", "XML"],
     "runtimeStatus": "planned-until-provider-fixtures-and-conformance-pass"
   },
+  "crossRepositoryEvidence": [
+    {
+      "jurisdiction": "au-commonwealth",
+      "repository": "edithatogo/foi-o",
+      "sourceEvidenceSha256": "3f3577972a614a6a72c3eaf94a493ac52f1eb207ea0881e38a0969f771de2fce",
+      "sourcePackSha256": "19dc7ddf07f3bcff38c13f4073f373e5545a316e8e5b922808b41415683e50d4",
+      "sourcePackFileSha256": "0c4ab86201ef714a4577d2b449d55daafff50a0da06d7b1ef483c275bbe0d111",
+      "status": "approved-parent-evidence-not-local-source-bytes"
+    },
+    {
+      "jurisdiction": "au-nsw",
+      "repository": "edithatogo/foi-o",
+      "sourceArtifactSha256": "2eb550bd34d127521debaa0b5da4bf11187151be0a10756ed94f9625ca3891e9",
+      "sourcePackFileSha256": "2d569bb74aa0a68207ae777f927b7740fe1ff11ba0ed0afdb7f19a8296b8e4a4",
+      "status": "approved-parent-evidence-not-local-source-bytes"
+    }
+  ],
   "sources": [
     {
       "jurisdiction": "au-act",

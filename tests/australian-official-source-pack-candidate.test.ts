@@ -21,6 +21,11 @@ const manifest = JSON.parse(
   redistribution: boolean;
   empiricalUse: boolean;
   sources: SourceCandidate[];
+  crossRepositoryEvidence: Array<{
+    jurisdiction: string;
+    repository: string;
+    status: string;
+  }>;
 };
 
 describe('Australian official source-pack candidate', () => {
@@ -51,5 +56,20 @@ describe('Australian official source-pack candidate', () => {
       expect(source.accessStatus).toBe('hash-verified-restricted-local');
       expect(['PDF', 'XML']).toContain(source.format);
     }
+  });
+
+  it('keeps Commonwealth and NSW evidence explicitly cross-repository', () => {
+    expect(manifest.crossRepositoryEvidence).toEqual([
+      expect.objectContaining({
+        jurisdiction: 'au-commonwealth',
+        repository: 'edithatogo/foi-o',
+        status: 'approved-parent-evidence-not-local-source-bytes',
+      }),
+      expect.objectContaining({
+        jurisdiction: 'au-nsw',
+        repository: 'edithatogo/foi-o',
+        status: 'approved-parent-evidence-not-local-source-bytes',
+      }),
+    ]);
   });
 });
