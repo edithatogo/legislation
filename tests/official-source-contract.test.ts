@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
 import {
@@ -49,5 +50,34 @@ describe('official source contract', () => {
     expect(() =>
       validateOfficialSourceArtifact({ ...tasmania, providerId: 'victorian-legislation' }, options)
     ).toThrow(/providerId mismatch/);
+  });
+
+  it('validates every six-jurisdiction candidate against its official host and byte pin', () => {
+    const manifest = JSON.parse(
+      readFileSync(
+        'docs/maintainers/australian-official-source-pack-candidate-2026-08-01.json',
+        'utf8'
+      )
+    ) as {
+      sources: Array<OfficialSourceArtifact>;
+    };
+    const hosts: Record<string, string> = {
+      'au-act': 'www.legislation.act.gov.au',
+      'au-nt': 'legislation.nt.gov.au',
+      'au-sa': 'www.legislation.sa.gov.au',
+      'au-tas': 'www.legislation.tas.gov.au',
+      'au-vic': 'content.legislation.vic.gov.au',
+      'au-wa': 'www.legislation.wa.gov.au',
+    };
+
+    expect(manifest.sources).toHaveLength(6);
+    for (const source of manifest.sources) {
+      const validated = validateOfficialSourceArtifact(source, {
+        allowedHosts: [hosts[source.jurisdiction] ?? ''],
+        expectedJurisdiction: source.jurisdiction,
+        expectedProviderId: source.providerId,
+      });
+      expect(source).toMatchObject(validated);
+    }
   });
 });
