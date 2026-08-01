@@ -16,8 +16,8 @@ publication, redistribution or runtime-activation authorization.
 | Candidate manifest status        | `candidate-restricted-local`                                                                        |
 | Local source candidates          | ACT, NT, SA, Tasmania, Victoria and WA; six hash-verified artifacts                                 |
 | Cross-repository parent evidence | Commonwealth and NSW references explicitly marked `approved-parent-evidence-not-local-source-bytes` |
-| Local implementation commits     | `995a7d1`, `e6dd0bb`, `b2d9daf`, `196c558`, `50673d8`, `37ca63e`                                    |
-| Current local HEAD               | `37ca63eeb10bd361f97d4d101818b1bfe73d671b`                                                          |
+| Local implementation commits     | `995a7d1`, `e6dd0bb`, `b2d9daf`, `196c558`, `50673d8`, `37ca63e`, `1f746cc`                         |
+| Release-gate portability fix     | `1f746cc`; aggregate release-submission gate passed                                                 |
 
 ## Validation evidence
 
