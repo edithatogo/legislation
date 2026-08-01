@@ -62,7 +62,11 @@ export function parseTasmaniaActXml(
     }
   }
 
-  if (id !== 'act-2009-070' || title !== source.title) {
+  if (!id || !title || !effectiveFrom || !officialVersion) {
+    throw new Error('Tasmania XML ACT root is missing required identity or version data');
+  }
+
+  if (title !== source.title) {
     throw new Error('Tasmania XML identity does not match the pinned source artifact');
   }
 

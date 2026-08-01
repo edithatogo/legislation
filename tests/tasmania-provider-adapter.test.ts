@@ -32,9 +32,31 @@ describe('Tasmania XML adapter', () => {
     });
   });
 
+  it('derives the Act identifier from XML rather than assuming a fixed Act', () => {
+    const otherSource = {
+      ...source,
+      title: 'Example Act 2010',
+      sourceUrl:
+        'https://www.legislation.tas.gov.au/view/whole/xml/inforce/2026-07-01/act-2010-001',
+    } satisfies OfficialSourceArtifact;
+    const otherXml = xml
+      .replace('TITLE="Right to Information Act 2009"', 'TITLE="Example Act 2010"')
+      .replace('ID="act-2009-070"', 'ID="act-2010-001"');
+
+    expect(parseTasmaniaActXml(otherXml, otherSource)).toMatchObject({
+      id: 'act-2010-001',
+      title: 'Example Act 2010',
+      source: otherSource,
+    });
+  });
+
   it.each([
     ['missing root', '<DOCUMENT/>', /ACT root/],
-    ['wrong identity', xml.replace('act-2009-070', 'act-2009-071'), /identity/],
+    [
+      'wrong identity',
+      xml.replace('Right to Information Act 2009', 'Example Act 2010'),
+      /identity/,
+    ],
     [
       'wrong version',
       xml.replace('PUBLICATION.DATE="2026-07-01"', 'PUBLICATION.DATE="2025-07-01"'),
