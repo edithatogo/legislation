@@ -150,6 +150,7 @@ SVGs
 reverified
 cutover
 semver
+pathspecs
 SHAs
 sessional
 Zenodo
