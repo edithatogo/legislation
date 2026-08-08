@@ -1,0 +1,73 @@
+{
+  "version": "1.0.0",
+  "policy": {
+    "officialSourceFirst": true,
+    "runtimeEnabled": false,
+    "legalRecordsIncluded": false,
+    "submissionAllowed": false,
+    "attributionRequired": true,
+    "licenceReviewRequired": true
+  },
+  "candidates": [
+    {
+      "providerId": "austlii",
+      "name": "Australasian Legal Information Institute",
+      "jurisdictions": [
+        "nz",
+        "au-commonwealth",
+        "au-act",
+        "au-nsw",
+        "au-nt",
+        "au-qld",
+        "au-sa",
+        "au-tas",
+        "au-vic",
+        "au-wa"
+      ],
+      "sourceUrls": [
+        "https://www.austlii.edu.au/",
+        "https://www5.austlii.edu.au/austlii/help/legis.html",
+        "https://www5.austlii.edu.au/au/legis/cth/table/"
+      ],
+      "sourceRole": "cross-jurisdiction discovery and comparison index",
+      "provenanceStatus": "requires-record-level-source-attribution",
+      "licenceStatus": "review-required-before-redistribution",
+      "licenceEvidenceUrl": "https://www5.austlii.edu.au/au/legis/cth/table/",
+      "coverageCaveats": [
+        "AustLII states that its legislation databases may lag amendments after the database update.",
+        "The Commonwealth legislation table identifies Commonwealth ownership and reserves rights outside permitted use.",
+        "Aggregator content must not be treated as an official consolidated source."
+      ],
+      "runtimeDecision": "evaluation-only",
+      "nextEvidence": [
+        "obtain written redistribution terms for the intended integration",
+        "prove record-level links to the originating official register",
+        "define freshness and conflict handling against official sources"
+      ]
+    },
+    {
+      "providerId": "nzlii",
+      "name": "New Zealand Legal Information Institute",
+      "jurisdictions": ["nz"],
+      "sourceUrls": [
+        "https://www.nzlii.org/",
+        "https://austlii.community/foswiki/NZResources/NZLIIUserGuide/NZLIIUsagePolicy"
+      ],
+      "sourceRole": "New Zealand legal-information discovery index",
+      "provenanceStatus": "requires-record-level-source-attribution",
+      "licenceStatus": "review-required-before-redistribution",
+      "licenceEvidenceUrl": "https://austlii.community/foswiki/NZResources/NZLIIUserGuide/NZLIIUsagePolicy",
+      "coverageCaveats": [
+        "The usage policy limits copying and reuse to permitted purposes and applicable copyright law.",
+        "Official New Zealand legislation remains the authority for current text and status."
+      ],
+      "runtimeDecision": "evaluation-only",
+      "nextEvidence": [
+        "confirm intended automated access is permitted",
+        "prove record-level links to legislation.govt.nz",
+        "define freshness and missing-record reporting"
+      ]
+    }
+  ],
+  "fixturePolicy": "metadata-only evaluation fixture; no legal text, extracted records, or fabricated coverage claims"
+}
