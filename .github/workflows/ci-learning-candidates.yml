@@ -1,0 +1,41 @@
+name: CI Learning Candidates
+
+on:
+  workflow_run:
+    workflows:
+      - "Docs Lint"
+      - "Release to Hugging Face"
+      - "Release to Zenodo"
+    types:
+      - completed
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' || github.event.workflow_run.conclusion == 'cancelled' || github.event.workflow_run.conclusion == 'timed_out' || github.event.workflow_run.conclusion == 'action_required' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Record CI failure candidate
+        run: |
+          python3 scripts/record_learning_candidate.py \
+            --backlog conductor/improvement-backlog.md \
+            --snapshot conductor/.tmp/ci-learning-candidates-${{ github.event.workflow_run.id }}.md \
+            --message "CI failure summary candidate for `${{ github.event.workflow_run.name }}`" \
+            --evidence "workflow=${{ github.event.workflow_run.name }}" \
+            --evidence "run_id=${{ github.event.workflow_run.id }}" \
+            --evidence "run_url=${{ github.event.workflow_run.html_url }}" \
+            --evidence "actor=${{ github.event.workflow_run.actor.login }}" \
+            --evidence "head_sha=${{ github.event.workflow_run.head_sha }}"
+
+      - name: Upload non-committing learning candidate artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ci-learning-candidates-${{ github.event.workflow_run.id }}
+          path: conductor/.tmp/ci-learning-candidates-${{ github.event.workflow_run.id }}.md
+
