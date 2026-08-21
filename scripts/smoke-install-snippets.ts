@@ -142,12 +142,12 @@ async function main(): Promise<void> {
 
   console.log('Building workspace package...');
   {
-    const command = shimmedCommand('corepack', ['pnpm', 'build']);
+    const command = shimmedCommand('pnpm', ['build']);
     await run(command.command, command.args, { timeoutMs: 60000 });
   }
   console.log('Packing workspace package...');
   {
-    const command = shimmedCommand('corepack', ['pnpm', 'pack', '--pack-destination', packDir]);
+    const command = shimmedCommand('pnpm', ['pack', '--pack-destination', packDir]);
     await run(command.command, command.args, { timeoutMs: 60000 });
   }
 

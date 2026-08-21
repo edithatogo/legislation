@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "foio.australian-official-source-pack.candidate.v1",
+  "status": "candidate-restricted-local",
+  "createdAt": "2026-08-01",
+  "runtimeActivation": false,
+  "publication": false,
+  "redistribution": false,
+  "empiricalUse": false,
+  "rightsBoundary": "Metadata and digests are repository-local candidate evidence; the retained source bytes remain restricted-local.",
+  "adapterContract": {
+    "common": [
+      "https-only official source URLs",
+      "version and effective-date identity required",
+      "complete-byte and media-type validation required",
+      "SHA-256 content pin required",
+      "change detection must fail closed",
+      "unsupported capabilities must return structured errors"
+    ],
+    "sourceFormats": ["PDF", "XML"],
+    "runtimeStatus": "planned-until-provider-fixtures-and-conformance-pass"
+  },
+  "crossRepositoryEvidence": [
+    {
+      "jurisdiction": "au-commonwealth",
+      "repository": "edithatogo/foi-o",
+      "sourceEvidenceSha256": "3f3577972a614a6a72c3eaf94a493ac52f1eb207ea0881e38a0969f771de2fce",
+      "sourcePackSha256": "19dc7ddf07f3bcff38c13f4073f373e5545a316e8e5b922808b41415683e50d4",
+      "sourcePackFileSha256": "0c4ab86201ef714a4577d2b449d55daafff50a0da06d7b1ef483c275bbe0d111",
+      "status": "approved-parent-evidence-not-local-source-bytes"
+    },
+    {
+      "jurisdiction": "au-nsw",
+      "repository": "edithatogo/foi-o",
+      "sourceArtifactSha256": "2eb550bd34d127521debaa0b5da4bf11187151be0a10756ed94f9625ca3891e9",
+      "sourcePackFileSha256": "2d569bb74aa0a68207ae777f927b7740fe1ff11ba0ed0afdb7f19a8296b8e4a4",
+      "status": "approved-parent-evidence-not-local-source-bytes"
+    }
+  ],
+  "sources": [
+    {
+      "jurisdiction": "au-act",
+      "providerId": "act-legislation",
+      "title": "Freedom of Information Act 2016",
+      "officialVersion": "Republication 16",
+      "effectiveFrom": "2025-12-16",
+      "sourceUrl": "https://www.legislation.act.gov.au/DownloadFile/a/2016-55/current/PDF/2016-55.PDF",
+      "format": "PDF",
+      "byteCount": 1061322,
+      "contentSha256": "6cb1904abe0c4743c98a85b4d3f93966002627643c9f4fd61a4b802fea862db9",
+      "accessStatus": "hash-verified-restricted-local"
+    },
+    {
+      "jurisdiction": "au-nt",
+      "providerId": "northern-territory-legislation",
+      "title": "Information Act 2002",
+      "officialVersion": "REPI013",
+      "effectiveFrom": "2026-06-01",
+      "sourceUrl": "https://legislation.nt.gov.au/api/sitecore/Act/PDF?id=11860",
+      "format": "PDF",
+      "byteCount": 610423,
+      "contentSha256": "d6a2b41fa3606016fa9b0340d0f2181c89d57ad91db4eac8cf06f0f985b25f87",
+      "accessStatus": "hash-verified-restricted-local"
+    },
+    {
+      "jurisdiction": "au-sa",
+      "providerId": "south-australian-legislation",
+      "title": "Freedom of Information Act 1991",
+      "officialVersion": "21.10.2021",
+      "effectiveFrom": "2021-10-21",
+      "sourceUrl": "https://www.legislation.sa.gov.au/_legislation-documents/lz/c/a/freedom-of-information-act-1991/current/1991.20.auth.pdf",
+      "format": "PDF",
+      "byteCount": 475828,
+      "contentSha256": "5d74807e85c271053bb2ab714f4521db473ef1efaaf91211d6d90a0bd58f3d73",
+      "accessStatus": "hash-verified-restricted-local"
+    },
+    {
+      "jurisdiction": "au-tas",
+      "providerId": "tasmanian-legislation",
+      "title": "Right to Information Act 2009",
+      "officialVersion": "2026-07-01",
+      "effectiveFrom": "2026-07-01",
+      "sourceUrl": "https://www.legislation.tas.gov.au/view/whole/xml/inforce/2026-07-01/act-2009-070",
+      "format": "XML",
+      "byteCount": 280287,
+      "contentSha256": "45fa401335a1f57ba3de30ea2ba3b2f14eb53eec6400e59081120e0e979cb4e6",
+      "accessStatus": "hash-verified-restricted-local",
+      "xmlIdentity": "FIRST.VALID.DATE=2026-07-01; PUBLICATION.DATE=2026-07-01; ID=act-2009-070"
+    },
+    {
+      "jurisdiction": "au-vic",
+      "providerId": "victorian-legislation",
+      "title": "Freedom of Information Act 1982",
+      "officialVersion": "Authorised Version 114",
+      "effectiveFrom": "2026-05-01",
+      "sourceUrl": "https://content.legislation.vic.gov.au/sites/default/files/2026-05/82-9859aa114-authorised.pdf",
+      "format": "PDF",
+      "byteCount": 1255392,
+      "contentSha256": "8885765330ce0ffc271f9b073d6820b473ecdbee4c59d79ed411bc484f3443c1",
+      "accessStatus": "hash-verified-restricted-local"
+    },
+    {
+      "jurisdiction": "au-wa",
+      "providerId": "western-australian-legislation",
+      "title": "Freedom of Information Act 1992",
+      "officialVersion": "07-r0-00",
+      "effectiveFrom": "2026-07-01",
+      "sourceUrl": "https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/mrdoc_49643.pdf/$FILE/Freedom%20Of%20Information%20Act%201992%20-%20%5B07-r0-00%5D.pdf?OpenElement",
+      "format": "PDF",
+      "byteCount": 540364,
+      "contentSha256": "ab2aa924a3898f78a8c2c25d88bff6073f99674eb36d1ca893d55519c3ea8651",
+      "accessStatus": "hash-verified-restricted-local"
+    }
+  ]
+}
