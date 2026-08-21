@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://legal-nz.local/conductor/learning-entry.schema.json",
+  "title": "Conductor learning entry",
+  "type": "object",
+  "required": ["entry_id", "observed_on", "repo", "scope", "trigger", "lessons_learned", "next_check_to_add"],
+  "properties": {
+    "entry_id": {
+      "type": "string",
+      "pattern": "^track-18-[a-z0-9-]+$",
+      "description": "Stable, unique identifier for this learning event."
+    },
+    "observed_on": {
+      "type": "string",
+      "format": "date",
+      "description": "YYYY-MM-DD date the learning entry was observed."
+    },
+    "repo": {
+      "type": "string",
+      "description": "Repository path where the learning applies."
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["track", "workflow", "skill", "tooling", "environment", "governance"],
+      "description": "Primary scope category of the incident."
+    },
+    "trigger": {
+      "type": "string",
+      "description": "What triggered the learning cycle."
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"]
+    },
+    "lessons_learned": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_check_to_add": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["open", "resolved", "verified"]
+    }
+  },
+  "additionalProperties": false
+}

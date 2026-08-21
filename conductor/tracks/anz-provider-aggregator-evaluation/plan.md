@@ -6,8 +6,10 @@
 
 - [x] Add aggregator evaluation to the requirements contract register.
 - [x] Add this Conductor track for the roadmap entry.
-- [ ] Identify candidate aggregators and licence/provenance constraints.
-- [ ] Decide whether any candidate can support non-runtime discovery work.
+- [x] Identify candidate aggregators and licence/provenance constraints in the
+      maintainer evaluation register.
+- [x] Decide that candidates remain evaluation-only discovery aids; no runtime
+      route or redistribution is enabled.
 
 ## Phase 2: Runtime decision
 
@@ -16,3 +18,8 @@
 - [ ] Add provider capability status only after an explicit source and licence
       review.
 - [ ] Add tests before any runtime route is enabled.
+
+Evidence: `docs/maintainers/aggregator-provider-evaluation.json` and
+`tests/aggregator-provider-evaluation.test.ts` record AustLII and NZLII source,
+provenance, licence, freshness, and attribution constraints without legal
+records or runtime capability.

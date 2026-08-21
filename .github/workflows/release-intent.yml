@@ -42,7 +42,7 @@ jobs:
             [ -z "$file" ] && continue
 
             case "$file" in
-              docs/*|conductor/*|.github/*|README.md|RELEASE_POLICY.md|SUPPORT_POLICY.md)
+              docs/*|conductor/*|.agents/*|.github/*|.gitmodules|README.md|RELEASE_POLICY.md|SUPPORT_POLICY.md)
                 ;;
               *)
                 REQUIRES_CHANGESET=1
