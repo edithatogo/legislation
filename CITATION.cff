@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: If you use this repository, please cite it using the metadata in this file.
+title: NZ Legislation Tool
+authors:
+- family-names: Mordaunt
+  given-names: Dylan
+repository-code: https://github.com/edithatogo/legislation
