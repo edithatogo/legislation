@@ -1,0 +1,28 @@
+name: FAIR research software assessment
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: fair-software-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  fair-software:
+    name: FAIR software advisory assessment
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Assess fair-software.eu recommendations
+        continue-on-error: true
+        uses: fair-software/howfairis-github-action@4c11146488125aa6e1531184eed51d781bcd5871 # 0.2.1
+        env:
+          PYCHARM_HOSTED: "1"
+        with:
+          MY_REPO_URL: "https://github.com/${{ github.repository }}"
